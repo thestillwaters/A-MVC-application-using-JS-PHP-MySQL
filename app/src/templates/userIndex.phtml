@@ -1,0 +1,26 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<div class="mainContainer">
+    <div class="optionBar">
+        <img src="../../logo.png" height="145" width="auto">
+        <h2>Welcome to Toolshed</h2>
+    </div>
+    <div class="formContainer">
+        <form class="loginForm" id="loginForm" method="POST" action="/customer/login">
+          <label> Username </label>
+          <input type="text" name="username" id="username" placeholder="Username"/><br><br>
+          <label> Password </label>
+          <input type="password" name="password" id="password" placeholder="Password"/><br><br>
+            <input type="submit" value="Log in">
+        </form>
+    </div>
+    <div class="backStepBlock">
+        <p class="registering">Not registered yet?<a href=<?= $linkTo('registering'); ?> > Register here</a></p>
+    </div>
+    <div>
+        <p id="loginError"></p>
+    </div>
+</div>
+<script src="../../javascript/userIndex.js"></script>
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

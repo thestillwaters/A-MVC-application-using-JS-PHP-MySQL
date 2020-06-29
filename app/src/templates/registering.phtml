@@ -1,0 +1,28 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<div class="mainContainer">
+  <div class="optionBar">
+      <img src="../../logo.png" height="145" width="auto">
+      <h2>Welcome to Toolshed</h2>
+  </div>
+  <div class="formContainer">
+    <form name="registerForm" class="registerForm" id="registerForm" method="post" action="/customer/created">
+      <h3> Registering page </h3><br><br>
+        <label>Name </label>            <input type="text" name="name" id="name" placeholder="Name"><br><br>
+        <label>Username </label>        <input type="text" name="username" id="username" placeholder="Username"/><br><br>
+        <label>E-mail </label>          <input type="email" name="email" id="email" placeholder="E-mail address"><br><br>
+        <label>Password </label>        <input type="password" name="password" id="password" placeholder="Password"/><br><br>
+        <label>Confirm password </label><input type="password" name="repeat" id="repeat" placeholder="Repeat password"/><br><br>
+        <input type="submit" value="Register" id="registerBtn">
+    </form>
+  </div>
+  <div class="backStepBlock">
+    <a href=<?= $linkTo('userIndex'); ?>>Return</a>
+  </div>
+  <div class="errorBlock">
+    <p id="registerError"></p>
+  </div>
+</div>
+<script src="../../javascript/registering.js"></script>
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

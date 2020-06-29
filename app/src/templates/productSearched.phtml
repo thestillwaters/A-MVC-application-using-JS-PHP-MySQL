@@ -1,0 +1,18 @@
+<table id="searchResult" border="1">
+<tr>
+  <td>SKU</td>
+  <td>Name</td>
+  <td>Category</td>
+  <td>Cost</td>
+  <td>Stock Qty</td>
+</tr>
+<?php foreach($products as $product) { ?>
+<tr>
+  <td><?=$product->getSKU()?>
+  <td><?=$product->getProductName()?>
+  <td><?=$product->getCategory()?>
+  <td><?=$product->getPrice()?>
+  <td><?=$product->getStockQty()?>
+</tr>
+<?php } ?>
+</table>

@@ -1,0 +1,14 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<div class="mainContainer"><br><br>
+    Customer: <?= $customer->getName()?> your account created completely. <br>
+    Username: <?= $customer->getUsername()?><br>
+    Email: <?= $customer->getEmail()?> <br>
+    Your ID: <?= $customer->getCustomerID()?>. <br>
+  Please back the the previous page and login.
+    <div class="backStepBlock">
+        <a href=<?= $linkTo('userIndex'); ?>>Return</a><br>
+    </div>
+</div>
+    <!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

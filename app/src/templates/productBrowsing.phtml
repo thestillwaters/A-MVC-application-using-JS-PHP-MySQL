@@ -1,0 +1,47 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<div class="mainContainer">
+  <div class="optionBar">
+  <a href="/" id="sidebarLogo"><img src="../../logo.png" height="145" width="auto"></a>
+  <ul>
+    <li><a href="/searching">Search</a></li>
+    <li><a class="active" href="/browsing">Browse</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+  </div>
+  <div class="displayBlock">
+     <div id="browseBlock">
+       <form id="browseForm">
+         <input name="isInStock" type="checkbox" value= 0 title="In-stock only"/><label>In-stock only</label>
+         <input name="hammersID" type="checkbox" value= 1 title="Hammers" checked/><label>Hammers</label>
+         <input name="heatGunsID" type="checkbox" value= 2 title="Heat guns" checked/><label>Heat guns</label>
+         <input name="pliersID" type="checkbox" value= 3 title="Pliers" checked/><label>Pliers</label>
+         <input name="screwdriversID" type="checkbox" value= 4 title="Screwdrivers" checked/><label>Screwdrivers</label>
+       </form>
+     </div>
+  <div id="browseResultBlock">
+    <table id="browseResult" border="1">
+      <tr>
+        <td>SKU</td>
+        <td>Name</td>
+        <td>Category</td>
+        <td>Cost</td>
+        <td>Stock Qty</td>
+      </tr>
+      <?php foreach($products as $product) { ?>
+        <tr>
+          <td><?=$product->getSKU()?></td>
+            <td><?=$product->getProductName()?></td>
+            <td><?=$product->getCategory()?></td>
+            <td><?=$product->getPrice()?></td>
+            <td><?=$product->getStockQty()?></td>
+        </tr>
+      <?php } ?>
+    </table>
+    </div>
+  </div>
+</div>
+
+<script src="../../javascript/productBrowsing.js"></script>
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

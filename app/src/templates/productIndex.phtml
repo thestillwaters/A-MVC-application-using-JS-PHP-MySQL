@@ -1,0 +1,29 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<div class="mainContainer">
+  <div class="optionBar">
+    <a id="sidebarLogo" href="/"><img src="../../logo.png" height="145" width="auto"></a>
+      <ul>
+        <li ><a href="/searching">Search</a></li>
+        <li ><a href="/browsing">Browse</a></li>
+        <li ><a href="/logout">Logout</a></li>
+      </ul>
+  </div>
+  <div class="displayBlock">
+    <div id="welcomeBlock">
+      <h2>Welcome <?=$name?></h2>
+        <h3>General usage instructions:</h3>
+          <div id="instructionBlock">
+            <h4>Browse page</h4>
+            <a>Please tick the boxes to display the info you would like to browse. Ticking the categories will
+              show each, ticking In-stock only will show stock more than 0. You can also tick more than one</a>
+            <h4>Search page</h4>
+            <a>Please type a product name or few characters you would like to search. All products informations
+              in database including no stock will display long as results match even few characters. </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

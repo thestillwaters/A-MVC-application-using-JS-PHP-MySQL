@@ -1,0 +1,137 @@
+@charset "UTF-8";
+div.mainContainer {
+  width: 70%;
+  margin: auto;
+  }
+
+/*set bg picture and scale*/
+html {
+  background: url(../../bg.jpg) no-repeat center center fixed #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*set error message block*/
+.error {
+  padding: 5px 10px;
+  margin-left: 20%;
+  border: 2px dashed #f1f1f1;
+  color: #0066FF;
+  width: 300px; }
+
+ul {
+  margin: 0;
+  overflow: hidden;
+  background-color: ghostwhite;
+  padding: 0;}
+ul li {
+  display: inline-block; }
+ul li a {
+  color: black;
+  text-align: center;
+  /*underscore menu items*/
+  text-decoration: none;
+  width:160px;
+  display: inline-block;
+  padding: 14px 14px; }
+ul li a:hover {
+  background-color:  orange;
+  color: green; }
+
+.active {
+  background-color: #111111;
+  color: white; }
+
+#instructionBlock {
+  padding-left: 2%;
+  opacity:0.8;
+  background-color: #DCDCDC;
+  padding-right: 2%;
+  border: 1px solid #111111; }
+
+
+/* set specific class "not register register here"*/
+.backStepBlock{
+  margin-left: 20%;
+  color: #111111;
+  width: 50%
+}
+.optionBar * {
+  display: inline-block; }
+
+
+
+table {
+  border-collapse: collapse;
+  opacity: 0.8;
+  background-color: #DCDCDC;
+  margin: auto;
+  width: 100%;
+  overflow: auto; }
+  table tr {
+    text-align: left;
+    padding: 2px;
+    border-bottom: 1px solid; }
+    table tr:first-child {
+      background-color: #111111;
+      color: white; }
+
+  table td {
+    padding: 7px;
+    border-right: 1px solid; }
+     /*cost col*/
+    table td:nth-child(4):before {
+      content: "$"; }
+    /* for stock qty col */
+    table td:nth-child(5) {
+  text-align: right; }
+
+.displayBlock #searchBlock, .displayBlock #browseBlock {
+  padding: 20px; }
+
+.displayBlock #searchForm input {
+  background-color: #DCDCDC;
+  box-sizing: content-box;
+  width: 25%;
+  transition: 0.4s;
+  margin: 6px;
+  opacity:0.8;
+  positon: fixed; }
+
+.displayBlock #searchForm input:focus {
+  border: 2px solid #555; }
+
+.displayBlock #browseForm {
+  display: block;
+  margin: auto;
+  top: 0;
+  positon: fixed; }
+
+
+/*set login page*/
+form.loginForm, form.registerForm {
+  width: 300px;
+  margin-left: 20%; }
+
+
+  form.loginForm input ,form.registerForm input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 6px;
+    transition: 0.4s;
+    font-size: 16px; }
+
+form.loginForm input[type=submit]:hover, form.registerForm input[type=submit]:hover
+{
+  background-color:  orange;
+  color: green; }
+
+    form.loginForm input:focus,form.registerForm input:focus {
+      border: 3px solid white; }
+
+
+
+/*# sourceMappingURL=site.css.map */

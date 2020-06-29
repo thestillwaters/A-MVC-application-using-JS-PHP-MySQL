@@ -1,0 +1,43 @@
+<?php include "header.phtml" ?>
+<!---------- Body starts --------------->
+<div class="mainContainer">
+  <div class="optionBar">
+  <a href="/" id="sidebarLogo"><img src="../../logo.png" height="145" width="auto"></a>
+  <ul>
+    <li><a class="active" href="/searching">Search</a></li>
+    <li><a href="/browsing">Browse</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+  </div>
+  <div class="displayBlock">
+    <div id="searchBlock">
+      <form id="searchForm" action="/searched/">
+        <label>Search: </label><input name="productName" id="searchBox" type="search" placeholder="Please type a product"/>
+      </form>
+    </div>
+    <div id="searchResultBlock">
+      <table id="searchResult" border="1">
+        <tr>
+          <td>SKU</td>
+            <td>Name</td>
+            <td>Category</td>
+            <td>Cost</td>
+            <td>Stock Qty</td>
+        </tr>
+          <?php foreach($products as $product) { ?>
+            <tr>
+              <td><?=$product->getSKU()?></td>
+              <td><?=$product->getProductName()?></td>
+              <td><?=$product->getCategory()?></td>
+              <td><?=$product->getPrice()?></td>
+              <td><?=$product->getStockQty()?></td>
+            </tr>
+          <?php } ?>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="javascript/productSearching.js"></script>
+<!---------- Body ends -------------------->
+<?php include "footer.phtml" ?>

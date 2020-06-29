@@ -1,0 +1,25 @@
+{
+  "name": "agilman/a2",
+  "version": "0.0.1",
+  "description": "",
+  "repositories": [
+    { "type": "vcs", "url": "https://github.com/agnz/PHP-Router" }
+  ],
+  "require": {
+    "dannyvankooten/php-router":"dev-PCRE-fix",
+    "ext-mysqli": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*",
+    "jms/serializer": "1.7.*",
+    "phpdocumentor/phpdocumentor": "^2.9"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "yh\\a3\\": "src/"
+    }
+  }
+}
